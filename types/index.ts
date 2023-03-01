@@ -1,11 +1,16 @@
 export enum Affordability {
-  AFFORDABLE = 'affordable',
-  PRICEY = 'pricey',
-  LUXURIOUS = 'luxurious',
+  AFFORDABLE = 'Affordable',
+  PRICEY = 'Pricey',
+  LUXURIOUS = 'Luxurious',
 }
 
 export enum Complexity {
-  SIMPLE = 'simple',
-  CHALLENGING = 'challenging',
-  HARD = 'hard',
+  SIMPLE = 'Simple',
+  CHALLENGING = 'Challenging',
+  HARD = 'Hard',
 }
+
+export type RootStackParamList = {
+  MealsCategories: undefined;
+  MealsOverview: { categoryId: string };
+};

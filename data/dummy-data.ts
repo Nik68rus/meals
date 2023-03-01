@@ -53,7 +53,7 @@ export const MEALS = [
     'Toast Hawaii',
     Affordability.AFFORDABLE,
     Complexity.SIMPLE,
-    'https://cdn.pixabay.com/photo/2018/07/11/21/51/toast-3532016_1280.jpg',
+    'https://images.unsplash.com/photo-1581771556488-da02d801966c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1974&q=80',
     10,
     [
       '1 Slice White Bread',
@@ -79,7 +79,7 @@ export const MEALS = [
     'Classic Hamburger',
     Affordability.PRICEY,
     Complexity.SIMPLE,
-    'https://cdn.pixabay.com/photo/2014/10/23/18/05/burger-500054_1280.jpg',
+    'https://images.unsplash.com/photo-1550317138-10000687a72b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2120&q=80',
     45,
     [
       '300g Cattle Hack',
@@ -108,7 +108,7 @@ export const MEALS = [
     'Wiener Schnitzel',
     Affordability.LUXURIOUS,
     Complexity.CHALLENGING,
-    'https://cdn.pixabay.com/photo/2018/03/31/19/29/schnitzel-3279045_1280.jpg',
+    'https://images.unsplash.com/photo-1599921841143-819065a55cc6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1931&q=80',
     60,
     [
       '8 Veal Cutlets',
@@ -141,7 +141,7 @@ export const MEALS = [
     'Salad with Smoked Salmon',
     Affordability.LUXURIOUS,
     Complexity.SIMPLE,
-    'https://cdn.pixabay.com/photo/2016/10/25/13/29/smoked-salmon-salad-1768890_1280.jpg',
+    'https://images.unsplash.com/photo-1534528696266-aade1e8bae09?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80',
     15,
     [
       'Arugula',
@@ -173,7 +173,7 @@ export const MEALS = [
     'Delicious Orange Mousse',
     Affordability.AFFORDABLE,
     Complexity.HARD,
-    'https://cdn.pixabay.com/photo/2017/05/01/05/18/pastry-2274750_1280.jpg',
+    'https://images.unsplash.com/photo-1626790708567-f4e61046deac?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80',
     240,
     [
       '4 Sheets of Gelatine',
@@ -206,7 +206,7 @@ export const MEALS = [
     'Pancakes',
     Affordability.AFFORDABLE,
     Complexity.SIMPLE,
-    'https://cdn.pixabay.com/photo/2018/07/10/21/23/pancake-3529653_1280.jpg',
+    'https://images.unsplash.com/photo-1528207776546-365bb710ee93?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80',
     20,
     [
       '1 1/2 Cups all-purpose Flour',
@@ -235,7 +235,7 @@ export const MEALS = [
     'Creamy Indian Chicken Curry',
     Affordability.PRICEY,
     Complexity.CHALLENGING,
-    'https://cdn.pixabay.com/photo/2018/06/18/16/05/indian-food-3482749_1280.jpg',
+    'https://images.unsplash.com/photo-1588166524941-3bf61a9c41db?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1968&q=80',
     35,
     [
       '4 Chicken Breasts',
@@ -312,7 +312,7 @@ export const MEALS = [
     'Asparagus Salad with Cherry Tomatoes',
     Affordability.LUXURIOUS,
     Complexity.SIMPLE,
-    'https://cdn.pixabay.com/photo/2018/04/09/18/26/asparagus-3304997_1280.jpg',
+    'https://images.unsplash.com/photo-1653107510942-fc06db7eca2f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80',
     30,
     [
       'White and Green Asparagus',
