@@ -1,3 +1,5 @@
+import { useNavigation } from '@react-navigation/native';
+import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import {
   View,
   Text,
@@ -7,15 +9,25 @@ import {
   Platform,
 } from 'react-native';
 import Meal from '../models/meal';
+import { RootStackParamList } from '../types';
+import MealDetails from './MealDetails';
 
 interface Props {
   item: Meal;
 }
 
+type MealDetailsScreenNavigationProp = NativeStackNavigationProp<
+  RootStackParamList,
+  'MealDetails'
+>;
+
 const MealItem = ({ item }: Props) => {
+  const navigation = useNavigation<MealDetailsScreenNavigationProp>();
+
   const onPress = () => {
-    console.log('Press');
+    navigation.navigate('MealDetails', { mealId: item.id });
   };
+
   return (
     <View style={styles.mealItem}>
       <Pressable
@@ -28,11 +40,11 @@ const MealItem = ({ item }: Props) => {
             <Image style={styles.image} source={{ uri: item.imageUrl }} />
             <Text style={styles.title}>{item.title}</Text>
           </View>
-          <View style={styles.details}>
-            <Text style={styles.detailItem}>{item.duration}м</Text>
-            <Text style={styles.detailItem}>{item.affordability}</Text>
-            <Text style={styles.detailItem}>{item.complexity}</Text>
-          </View>
+          <MealDetails
+            affordability={item.affordability}
+            complexity={item.complexity}
+            duration={item.duration}
+          />
         </View>
       </Pressable>
     </View>
@@ -60,15 +72,6 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     fontSize: 18,
     margin: 8,
-  },
-  details: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'center',
-    padding: 8,
-  },
-  detailItem: {
-    marginHorizontal: 4,
   },
   innerContainer: {
     borderRadius: 8,

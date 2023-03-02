@@ -13,4 +13,5 @@ export enum Complexity {
 export type RootStackParamList = {
   MealsCategories: undefined;
   MealsOverview: { categoryId: string };
+  MealDetails: { mealId: string };
 };
