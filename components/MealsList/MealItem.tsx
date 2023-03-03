@@ -8,9 +8,9 @@ import {
   Pressable,
   Platform,
 } from 'react-native';
-import Meal from '../models/meal';
-import { RootStackParamList } from '../types';
-import MealDetails from './MealDetails';
+import Meal from '../../models/meal';
+import { RootStackParamList } from '../../types';
+import MealDetails from '../MealDetails';
 
 interface Props {
   item: Meal;
