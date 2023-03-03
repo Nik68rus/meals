@@ -1,20 +1,19 @@
-import { useContext } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import MealsList from '../components/MealsList/MealsList';
 import { MEALS } from '../data/dummy-data';
-import { FavoritesContext } from '../store/context/favorites-context';
+import { useAppSelector } from '../hooks/store';
 
 const getMealById = (id: string) => MEALS.find((meal) => meal.id === id);
 
 const FavoriteScreen = () => {
-  const favCtx = useContext(FavoritesContext);
+  const favMealIds = useAppSelector((store) => store.favorites.ids);
 
-  const meals = favCtx.ids.map(getMealById);
+  const meals = favMealIds.map(getMealById);
 
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Favorite meals</Text>
-      {favCtx.ids.length ? (
+      {meals.length ? (
         <MealsList items={meals} />
       ) : (
         <Text style={styles.info}>Nothing here yet</Text>

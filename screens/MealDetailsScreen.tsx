@@ -1,12 +1,13 @@
 import { NativeStackScreenProps } from '@react-navigation/native-stack';
-import { useContext, useLayoutEffect } from 'react';
+import { useLayoutEffect } from 'react';
 import { StyleSheet, Text, View, Image, ScrollView } from 'react-native';
 import IconButton from '../components/IconButton';
 import List from '../components/MealDetail/List';
 import Subtitle from '../components/MealDetail/Subtitle';
 import MealDetails from '../components/MealDetails';
 import { MEALS } from '../data/dummy-data';
-import { FavoritesContext } from '../store/context/favorites-context';
+import { useAppDispatch, useAppSelector } from '../hooks/store';
+import { addFavorite, removeFavorite } from '../store/redux/favorites';
 import { RootStackParamList } from '../types';
 
 type Props = NativeStackScreenProps<RootStackParamList, 'MealDetails'>;
@@ -14,12 +15,15 @@ type Props = NativeStackScreenProps<RootStackParamList, 'MealDetails'>;
 const MealDetailsScreen = ({ route, navigation }: Props) => {
   const { mealId } = route.params;
   const meal = MEALS.find((m) => m.id === mealId);
+  const dispatch = useAppDispatch();
+  const favoriteIds = useAppSelector((store) => store.favorites.ids);
 
-  const favCtx = useContext(FavoritesContext);
-  const isFavorite = favCtx.ids.some((id) => id === mealId);
+  const isFavorite = favoriteIds.some((id) => id === mealId);
 
   const favBtnClickHandler = () => {
-    isFavorite ? favCtx.removeFavorite(mealId) : favCtx.addFavorite(mealId);
+    isFavorite
+      ? dispatch(removeFavorite(mealId))
+      : dispatch(addFavorite(mealId));
   };
 
   useLayoutEffect(() => {
